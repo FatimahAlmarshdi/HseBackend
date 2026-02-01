@@ -1,0 +1,26 @@
+# .NET Core
+bin/
+obj/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE
+.vscode/
+.idea/
+
+# User Secrets
+secrets.json
+
+# Environment variables
+.env
+
+# Logs
+*.log
