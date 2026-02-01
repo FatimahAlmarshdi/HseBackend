@@ -23,8 +23,11 @@ builder.Services.AddScoped<HseBackend.Services.PdfService>();
 builder.Services.AddScoped<HseBackend.Services.EmailService>();
 
 builder.Services.AddCors(options => {
-    options.AddPolicy("AllowAll",
-        builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+    options.AddPolicy("AllowAll", policy => {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
 });
 
 var app = builder.Build();
