@@ -41,6 +41,11 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseCors("AllowAll");
+app.UseSwagger();
+app.UseSwaggerUI(c => {
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "HSE API V1");
+    c.RoutePrefix = "swagger";
+});
 app.UseStaticFiles(); // Enable serving generated PDFs
 app.UseAuthorization();
 app.MapControllers();
